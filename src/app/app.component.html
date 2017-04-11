@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">    
+    <img src="http://images2.wikia.nocookie.net/__cb20100209053551/thecaptainunderpants/images/a/a1/PP-1-.gif" alt="Tippy Tinkletrousers" class="img-thumbnail img-responsive">
+    <h1 class="name">{{title}}</h1>
+  </div>
+  <div class="row instructions">
+    <strong>Here you will find out your name! Type your current name and click the "Translate" button to find out your new name.</strong>
+  </div>
+  <div class="row">
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="currentName">Current Name:</label>
+        <input type="text" id="currentName" name="currentName" [(ngModel)]="currentName" class="form-control" placeholder="Current Name" />
+      </div>
+      <button type="button" class="btn btn-default" (click)="translate()">Translate</button>
+    </form>
+  </div>
+  <div class="row results">
+    <div *ngFor="let result of results; let isEven = even;" [class.even]="isEven">
+      {{result}}
+    </div>
+  </div>
+</div>

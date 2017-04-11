@@ -1,0 +1,20 @@
+.name {
+    display: inline-block;
+    padding-left: 2em;
+}
+.instructions {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.instructions strong {
+    font-size: 200%;
+}
+.results {
+    margin-top: 2em;
+    width: 100%;
+    min-height: 250px;
+    height: 100%;
+}
+.even {
+    background-color: lightblue;
+}
